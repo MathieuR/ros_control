@@ -111,7 +111,6 @@ public:
     const double cmd = internal::saturate(jh_.getCommand(), min_pos, max_pos);
 
     // Optional helper code for debugging, not realtime safe ----------
-#define USE_JOINT_LIMIT_DEBUG // Show warnings when joint limits exceeded
 #ifdef USE_JOINT_LIMIT_DEBUG
     if (cmd != jh_.getCommand())
     {
